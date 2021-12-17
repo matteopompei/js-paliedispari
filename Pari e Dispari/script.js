@@ -39,9 +39,9 @@ document.writeln("è un numero <strong>" + sumCheck + "</strong><br>");
 
 // Dichiariamo chi ha vinto
 if (PD == sumCheck) {
-  document.writeln("Hai vinto, sei un campione!");
+  document.writeln("<div class=\"win\">Hai vinto, sei un campione!</div>");
 }
 else {
-  document.writeln("Il computer ha vinto, sei un perdente!");
+  document.writeln("<div class=\"lose\">Il computer ha vinto, sei un perdente!</div>");
 }
 

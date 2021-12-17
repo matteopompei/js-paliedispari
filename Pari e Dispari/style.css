@@ -3,3 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  font-size: 2rem;
+  padding: 5%;
+}
+
+strong {
+  color: #ff0;
+}
+
+.win {
+  color: #0f0
+}
+
+.lose {
+  color: #f00;
+}
