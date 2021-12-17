@@ -10,10 +10,10 @@ function palCheck(pal) {
   let reverseArray = lettersArr.reverse();
   let reverseWord = reverseArray.join("");
   if (word.toLowerCase() == reverseWord.toLowerCase()) {
-    pal = "La parola è palindroma!";
+    return pal = "La parola è palindroma!";
   }
   else {
-    pal = "La parola <strong>NON</strong> è palindroma!";
+    return pal = "La parola <strong>NON</strong> è palindroma!";
   }
 }
 
