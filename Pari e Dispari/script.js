@@ -18,18 +18,18 @@ let nCPU = nRandom(); // Registriamo in memoria il numero assegnandolo ad una va
 
 sum = nUser + nCPU; // Sommiamo le due variabili con i numeri
 
-document.writeln("Hai scelto <strong>" + PD + "</strong><br>");
+document.writeln("Hai scelto <strong>" + PD.toLowerCase() + "</strong><br>");
 document.writeln("Il tuo numero: <strong>" + nUser + "</strong><br>");
 document.writeln("Il numero del computer: <strong>" + nCPU + "</strong><br>");
-document.writeln("La somma è <strong>" + sum + "</strong>");
+document.writeln("La somma è <strong>" + sum + "</strong>, ");
 
 // Controlliamo se la somma delle due variabili è un numero pari o un numero dispari
 function pdCheck() {
   if (sum % 2 != 0) {
-    sum = "Dispari";
+    sum = "dispari";
   }
   else {
-    sum = "Pari";
+    sum = "pari";
   }
   return sum;
 }
@@ -38,10 +38,9 @@ let sumCheck = pdCheck(); // Richiamiamo la funzione e assegnamola ad una variab
 document.writeln("è un numero <strong>" + sumCheck + "</strong><br>");
 
 // Dichiariamo chi ha vinto
-if (PD == sumCheck) {
+if (PD.toLowerCase() == sumCheck) {
   document.writeln("<div class=\"win\">Hai vinto, sei un campione!</div>");
 }
 else {
   document.writeln("<div class=\"lose\">Il computer ha vinto, sei un perdente!</div>");
 }
-

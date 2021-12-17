@@ -17,9 +17,12 @@ strong {
 }
 
 .win {
-  color: #0f0
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
 }
 
 .lose {
   color: #f00;
+  text-shadow: 0 0 10px #f00;
+
 }
