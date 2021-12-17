@@ -4,16 +4,44 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
+
 // Chiedo di scegliere pari o dispari e poi un numero da 1 a 5
-// prompt("PARI o DISPARI?");
-// prompt("Scegli un numero da 1 a 5!");
+let PD = prompt("PARI o DISPARI?");
+let nUser = parseInt(prompt("Scegli un numero da 1 a 5!"));
 
 // Generiamo un numero random da 1 a 5 per il computer
 // E inseriamoloin una funzione
 function nRandom() {
-  return Math.floor(Math.random() * 5) +1;
+  return parseInt(Math.floor(Math.random() * 5) +1);
 }
 let nCPU = nRandom(); // Registriamo in memoria il numero assegnandolo ad una variabile
 
+sum = nUser + nCPU; // Sommiamo le due variabili con i numeri
 
-document.writeln(nCPU);
+document.writeln("Hai scelto <strong>" + PD + "</strong><br>");
+document.writeln("Il tuo numero: <strong>" + nUser + "</strong><br>");
+document.writeln("Il numero del computer: <strong>" + nCPU + "</strong><br>");
+document.writeln("La somma è <strong>" + sum + "</strong>");
+
+// Controlliamo se la somma delle due variabili è un numero pari o un numero dispari
+function pdCheck() {
+  if (sum % 2 != 0) {
+    sum = "Dispari";
+  }
+  else {
+    sum = "Pari";
+  }
+  return sum;
+}
+
+let sumCheck = pdCheck(); // Richiamiamo la funzione e assegnamola ad una variabile per tenerla in memoria
+document.writeln("è un numero <strong>" + sumCheck + "</strong><br>");
+
+// Dichiariamo chi ha vinto
+if (PD == sumCheck) {
+  document.writeln("Hai vinto, sei un campione!");
+}
+else {
+  document.writeln("Il computer ha vinto, sei un perdente!");
+}
+
