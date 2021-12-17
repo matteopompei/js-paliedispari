@@ -2,20 +2,19 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 let word = prompt("Inserisci una parola");
-let pal = "";
 
 // Controlliamo se la parola è un palindromo
-function palCheck(pal) {
-  let lettersArr = word.split("");
+function palCheck(wordChecked) {
+  let lettersArr = wordChecked.split("");
   let reverseArray = lettersArr.reverse();
   let reverseWord = reverseArray.join("");
-  if (word.toLowerCase() == reverseWord.toLowerCase()) {
-    return pal = "La parola è palindroma!";
+  if (wordChecked.toLowerCase() == reverseWord.toLowerCase()) {
+    return "La parola è palindroma!";
   }
   else {
-    return pal = "La parola <strong>NON</strong> è palindroma!";
+    return "La parola <strong>NON</strong> è palindroma!";
   }
 }
 
 document.writeln("Parola inserita: " + word + "<br>");
-document.writeln(palCheck(pal));
+document.writeln(palCheck(word));
