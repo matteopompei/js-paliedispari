@@ -11,3 +11,8 @@ body {
   font-size: 2rem;
   padding: 5%;
 }
+
+
+strong {
+  color: #f00;
+}

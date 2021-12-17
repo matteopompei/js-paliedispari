@@ -14,7 +14,7 @@ function palindroma() {
     else {
       return "La parola è palindroma!";
     }
-  }  
+  } 
 }
 
 document.writeln("Parola inserita: " + word + "<br>");
