@@ -9,8 +9,18 @@
 let PD = prompt("PARI o DISPARI?");
 let nUser = parseInt(prompt("Scegli un numero da 1 a 5!"));
 
+// Controllo se sono stati inseriti dei numeri nel rage richiesto
+if (nUser > 5 || nUser < 1) {
+  do {
+    alert("Hai inserito un numero non valido!");
+    nUser = parseInt(prompt("Scegli un numero da 1 a 5!"));
+  }
+  while (nUser > 5 || nUser < 1);
+}
+
+
 // Generiamo un numero random da 1 a 5 per il computer
-// E inseriamoloin una funzione
+// E inseriamolo in una funzione
 function nRandom() {
   return parseInt(Math.floor(Math.random() * 5) +1);
 }
