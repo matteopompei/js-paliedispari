@@ -4,17 +4,18 @@
 let word = prompt("Inserisci una parola");
 
 // Controlliamo se la parola è un palindromo
-function palCheck(wordChecked) {
-  let lettersArr = wordChecked.split("");
-  let reverseArray = lettersArr.reverse();
-  let reverseWord = reverseArray.join("");
-  if (wordChecked.toLowerCase() == reverseWord.toLowerCase()) {
-    return "La parola è palindroma!";
-  }
-  else {
-    return "La parola <strong>NON</strong> è palindroma!";
-  }
+function palindroma() {
+  let wordArr = word.toLowerCase().split("");
+  let half = Math.floor(wordArr.length / 2);
+  for (i = 0, i2 = wordArr.length - 1; i < half; i++, i2--) {
+    if (wordArr[i] != wordArr[i2]) {
+      return "La parola <strong>NON</strong> è palindroma!";
+    }
+    else {
+      return "La parola è palindroma!";
+    }
+  }  
 }
 
 document.writeln("Parola inserita: " + word + "<br>");
-document.writeln(palCheck(word));
+document.writeln(palindroma());
